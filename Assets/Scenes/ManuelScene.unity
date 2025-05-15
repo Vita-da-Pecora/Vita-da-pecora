@@ -153,8 +153,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 935183311}
   cam: {fileID: 1983106145}
-  speed: 5
-  turnSmoothTime: 0
+  speed: 2
+  sprinting: 3
+  turnSmoothTime: 0.1
+  jumpSpeed: 0
 --- !u!143 &935183311
 CharacterController:
   m_ObjectHideFlags: 0
