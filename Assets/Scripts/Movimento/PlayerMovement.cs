@@ -18,11 +18,14 @@ public class PlayerMovement : MonoBehaviour
     //bool sprint
     bool isSprinting = false;
 
-    //float jump
-    public float jumpSpeed;
-    private float ySpeed;
+    //float salto
+    public float jumpForce = 5f;
+    public float gravity = -9.81f;
+    private Vector3 velocity;
     private bool isGrounded;
-
+    public Transform groundCheck;      // Assegna un oggetto vuoto appena sotto la pecora
+    public float groundDistance = 0.2f; // Raggio del cerchio di controllo
+    public LayerMask groundMask;       // Scegli il layer del terreno nell'Inspector
 
     private void Start()
     {
@@ -62,24 +65,28 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        
 
-        ySpeed += Physics.gravity.y * Time.deltaTime;
-        if (Input.GetButtonDown("jump"))
+        //controller grounded
+        isGrounded = controller.isGrounded;
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if (isGrounded && velocity.y < 0)
         {
-            ySpeed = 0.5f;
+            velocity.y = -2f; // tiene incollato al suolo
         }
 
-        if (controller.isGrounded)
+        // Salto
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            ySpeed = 0.5f;
-                isGrounded = true;
-                if (Input.GetButtonDown("jump"))
-                {
-                 ySpeed = jumpSpeed;
-                 isGrounded = false;
-                }
+            velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
         }
+
+        //gravità
+        velocity.y += gravity * Time.deltaTime;
+
+        // movement personaggio
+        controller.Move(velocity * Time.deltaTime);
+
     }
 }
 
