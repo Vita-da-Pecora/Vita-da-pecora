@@ -5654,26 +5654,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1124163391}
-    - target: {fileID: 1886210804084102521, guid: 3a19af38cf50ebb409f16a7c31d6f9e2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToMainMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 5270026413059619310, guid: 3a19af38cf50ebb409f16a7c31d6f9e2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1124163391}
-    - target: {fileID: 5270026413059619310, guid: 3a19af38cf50ebb409f16a7c31d6f9e2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeGame
-      objectReference: {fileID: 0}
     - target: {fileID: 7118800287374101511, guid: 3a19af38cf50ebb409f16a7c31d6f9e2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1124163391}
-    - target: {fileID: 7118800287374101511, guid: 3a19af38cf50ebb409f16a7c31d6f9e2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
