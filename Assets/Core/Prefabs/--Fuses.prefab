@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3424518895931800024}
   - component: {fileID: 828241173803171725}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Fuse1_Green
   m_TagString: Fuse1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 102585409717185918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
-  m_LocalPosition: {x: 169.66, y: 81.078, z: -40.9}
+  m_LocalPosition: {x: 3.63, y: 81.21, z: -22}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 21b3a157704c1864aa3ff80972c29470, type: 2}
+  - {fileID: 2100000, guid: 48f6d31009dbfaf45b94d23d06ccd9b8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 8396745454293748919}
   - component: {fileID: 5422272690404453539}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: Fuse2_Orange
   m_TagString: Fuse2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 420736225717241413}
   serializedVersion: 2
   m_LocalRotation: {x: -0.06567736, y: 0.24511127, z: -0.25034732, w: 0.93430895}
-  m_LocalPosition: {x: 7.5, y: 85.221, z: -10.65}
+  m_LocalPosition: {x: 7.35, y: 80.9, z: -22}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -204,7 +204,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 48f6d31009dbfaf45b94d23d06ccd9b8, type: 2}
+  - {fileID: 2100000, guid: 21b3a157704c1864aa3ff80972c29470, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 8981669433842621802}
   - component: {fileID: 2387075082661255347}
   m_Layer: 0
-  m_Name: Capsule (2)
+  m_Name: Fuse3_Brown
   m_TagString: Fuse3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,7 +339,7 @@ Transform:
   m_GameObject: {fileID: 6867319019950492329}
   serializedVersion: 2
   m_LocalRotation: {x: -0.20311505, y: 0.7580358, z: -0.1604106, w: 0.5986606}
-  m_LocalPosition: {x: -167.46, y: 83.68, z: -61.2}
+  m_LocalPosition: {x: 10.16, y: 81.01, z: -22}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
