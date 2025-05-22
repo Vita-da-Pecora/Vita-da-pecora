@@ -2,6 +2,8 @@ using UnityEngine;
 using System;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class Fuse : MonoBehaviour
 {
@@ -30,6 +32,15 @@ public class Fuse : MonoBehaviour
 
     [Header("--- Canvas --- ")]
     [SerializeField] private Canvas canvasIndication;
+    [SerializeField] private Canvas canvasFusesCount;
+
+    [Header("--- Fuses Canvas ---")]
+    [SerializeField] private Image emptyGreen;
+    [SerializeField] private Image emptyOrange;
+    [SerializeField] private Image emptyBrown;
+    [SerializeField] private Image takenGreen;
+    [SerializeField] private Image takenOrange;
+    [SerializeField] private Image takenBrown;
 
 
     private bool isTaken1 = false;
@@ -43,8 +54,15 @@ public class Fuse : MonoBehaviour
     public void Start()
     {
         canvasIndication.gameObject.SetActive(false);
+        //canvasFusesCount.gameObject.SetActive(false);
         lightHouse.gameObject.SetActive(false);
         door.SetActive(false);
+        emptyGreen.gameObject.SetActive(true);
+        emptyOrange.gameObject.SetActive(true);
+        emptyBrown.gameObject.SetActive(true);
+        takenGreen.gameObject.SetActive(false);
+        takenOrange.gameObject.SetActive(false);
+        takenBrown.gameObject.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)
@@ -53,27 +71,33 @@ public class Fuse : MonoBehaviour
 
         switch (other.gameObject.tag)
         {
-            case "Fuse1":
+            case "Fuse1": //green
                 if (!isSpawned1)
                 {
                     other.gameObject.SetActive(false);
                     isTaken1 = true;
+                    emptyGreen.gameObject.SetActive(false);
+                    takenGreen.gameObject.SetActive(true);
                 }
                 break;
 
-            case "Fuse2":
+            case "Fuse2": //orange
                 if (!isSpawned2)
                 {
                     other.gameObject.SetActive(false);
                     isTaken2 = true;
+                    emptyOrange.gameObject.SetActive(false);
+                    takenOrange.gameObject.SetActive(true);
                 }
                 break;
 
-            case "Fuse3":
+            case "Fuse3": //brown
                 if (!isSpawned3)
                 {
                     other.gameObject.SetActive(false);
                     isTaken3 = true;
+                    emptyBrown.gameObject.SetActive(false);
+                    takenBrown.gameObject.SetActive(true);
                 }
                 break;
         }
@@ -155,6 +179,7 @@ public class Fuse : MonoBehaviour
             lightHouse.gameObject.SetActive(true);
             canvasIndication.gameObject.SetActive(false);
             isFinished = true;
+            canvasFusesCount.gameObject.SetActive(false);
         }
     }
 }
