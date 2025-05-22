@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -41,9 +42,13 @@ public class Enemy_Patrol : EnemyState
             _controller.Agent.SetDestination(_controller.PatrolPoints[_currentIndex].position);
         }
 
-        if (Vector3.Distance(_controller.transform.position, _controller.PlayerTransform.position) < playerSightRadius)
+        Mimetismo mimetismo = _controller.PlayerTransform.GetComponent<Mimetismo>();
+        if (mimetismo.isInvisible != true)
         {
-            _controller.SetState(_controller.ChaseState);
+            if (Vector3.Distance(_controller.transform.position, _controller.PlayerTransform.position) < playerSightRadius)
+            {
+                _controller.SetState(_controller.ChaseState);
+            }
         }
     }
     public override void OnExit(Enemy_Controller _controller)

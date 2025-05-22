@@ -32,6 +32,7 @@ public class Mimetismo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log("Sono vivo");
         if (other.CompareTag("SheepGroup"))
         {
             nearSheep = true;
@@ -41,6 +42,7 @@ public class Mimetismo : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        //Debug.Log("Sono vivo2");
         if (other.CompareTag("SheepGroup"))
         {
             nearSheep = false;

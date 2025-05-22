@@ -16,6 +16,8 @@ public class Enemy_Chase : EnemyState
 
     public override void OnUpdate(Enemy_Controller _controller)
     {
+        float distanceToPlayer = Vector3.Distance(_controller.transform.position, _controller.PlayerTransform.position);
+
         // Controllo invisibilità
         Mimetismo mimetismo = _controller.PlayerTransform.GetComponent<Mimetismo>();
         if (mimetismo != null && mimetismo.isInvisible)
@@ -26,8 +28,6 @@ public class Enemy_Chase : EnemyState
             _controller.SetState(_controller.PatrolState);
             return;
         }
-
-        float distanceToPlayer = Vector3.Distance(_controller.transform.position, _controller.PlayerTransform.position);
 
         // Se è troppo lontano, torna in patrol
         if (distanceToPlayer > chaseRadius)
