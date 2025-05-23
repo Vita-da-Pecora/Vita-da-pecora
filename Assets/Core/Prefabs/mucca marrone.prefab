@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2694093758576235200, guid: cd2c6a0198650534bba92977f0c216bf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a98e8be4ab89c54481c7eb08a9cb1ca, type: 2}
     - target: {fileID: 5176242842793573176, guid: cd2c6a0198650534bba92977f0c216bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7477801668920885969, guid: cd2c6a0198650534bba92977f0c216bf, type: 3}
       propertyPath: m_Name
-      value: mucca nera Variant
+      value: mucca marrone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
