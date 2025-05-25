@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8a3f6d6d4ed23dd4bbd93ab588075ca9
+timeCreated: 1448541438
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50759
+  packageName: HQ Big Rock
+  packageVersion: 1.0
+  assetPath: Assets/HQ_BigRock/ModelAndTextures/HQBigRock_mtl.mat
+  uploadId: 91579

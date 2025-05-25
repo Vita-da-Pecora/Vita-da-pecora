@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a64b4c4fff68a2445ae3a33ae37deb57
+timeCreated: 1485862247
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 81901
+  packageName: Rocks HD Pack
+  packageVersion: 1.0
+  assetPath: Assets/Rock_pack/prefab/Rock_01.prefab
+  uploadId: 159426

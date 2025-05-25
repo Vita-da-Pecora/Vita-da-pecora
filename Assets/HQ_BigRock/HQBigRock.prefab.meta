@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c678e1444891a2743816ee434f771d6d
+timeCreated: 1448541776
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50759
+  packageName: HQ Big Rock
+  packageVersion: 1.0
+  assetPath: Assets/HQ_BigRock/HQBigRock.prefab
+  uploadId: 91579
