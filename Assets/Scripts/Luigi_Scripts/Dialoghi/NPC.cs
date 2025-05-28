@@ -12,4 +12,13 @@ public class NPC : Interactable
         base.Interact();
         dialogueManager.StartDialogue(characterName, dialogueLines);
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            dialogueManager.EndDialogue();
+        }
+    }
 }
+

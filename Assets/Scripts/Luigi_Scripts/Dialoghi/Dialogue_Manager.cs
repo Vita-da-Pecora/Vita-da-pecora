@@ -65,7 +65,7 @@ public class Dialogue_Manager : MonoBehaviour
         isTyping = false;
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         dialoguePanel.SetActive(false);
     }

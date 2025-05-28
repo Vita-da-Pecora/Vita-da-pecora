@@ -10,6 +10,9 @@ public class SheepGroupMovement : MonoBehaviour
     private NavMeshAgent agent;
     private int currentWaypointIndex = 0;
 
+    [SerializeField]
+    private Transform PlayerPosition;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -30,4 +33,6 @@ public class SheepGroupMovement : MonoBehaviour
             agent.SetDestination(waypoints[currentWaypointIndex].position);
         }
     }
+
+    public Vector3 GetPlayerPosition() {  return PlayerPosition.position; }
 }

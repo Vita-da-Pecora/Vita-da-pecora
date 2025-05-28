@@ -4,7 +4,7 @@ public class Mimetismo : MonoBehaviour
 {
     public bool isInvisible { get; private set; } = false;
     private bool nearSheep = false;
-    private Transform SheepGroup; // riferimento al gruppo da seguire
+    private SheepGroupMovement SheepGroup; // riferimento al gruppo da seguire
     public float velocit‡Sincronizzazione = 2f;
 
     void Update()
@@ -13,6 +13,10 @@ public class Mimetismo : MonoBehaviour
         {
             isInvisible = !isInvisible;
             Debug.Log("Stato mimetismo: " + isInvisible);
+            
+            bool enable = isInvisible ? false : true;
+            GetComponent<ThirdPersonController>().enabled = enable;
+            GetComponent<CharacterController>().enabled = enable;
         }
 
         if (!nearSheep && isInvisible)
@@ -24,26 +28,33 @@ public class Mimetismo : MonoBehaviour
         if (isInvisible && SheepGroup != null)
         {
             // Sincronizza la posizione gradualmente verso il gruppo
-            Vector3 posizioneTarget = SheepGroup.position;
-            posizioneTarget.y = transform.position.y; // ignora altezza
+            Vector3 posizioneTarget = SheepGroup.GetPlayerPosition();
             transform.position = Vector3.Lerp(transform.position, posizioneTarget, Time.deltaTime * velocit‡Sincronizzazione);
+            if (Vector3.Distance(transform.position, posizioneTarget) <= 0.3)
+            {
+                transform.position = posizioneTarget;
+            }
+            //transform.position = posizioneTarget;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Sono vivo");
-        if (other.CompareTag("SheepGroup"))
+        //if (other.CompareTag("SheepGroup"))
+        if (other.TryGetComponent(out SheepGroupMovement sheepGroupMovement))
+
         {
             nearSheep = true;
-            SheepGroup = other.transform; // salva il gruppo attuale
+            SheepGroup = sheepGroupMovement; // salva il gruppo attuale
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         //Debug.Log("Sono vivo2");
-        if (other.CompareTag("SheepGroup"))
+        //if (other.CompareTag("SheepGroup"))
+        if (other.TryGetComponent(out SheepGroupMovement sheepGroupMovement))
         {
             nearSheep = false;
             SheepGroup = null;

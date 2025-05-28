@@ -1,18 +1,16 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy_Attack : MonoBehaviour
 {
-    //[Header("Reference")]
-    //[SerializeField] private HealthSystem _HS;
+    [Header("SetUp")]
+    [SerializeField] private string loseSceneName = "SCN_Lose";
 
-
-    //[Header("SetUp")]
-    //[SerializeField] private float _damage;
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        other.GetComponent<HealthSystem>().TakeDamage(_damage);
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(loseSceneName);
+        }
+    }
 }
