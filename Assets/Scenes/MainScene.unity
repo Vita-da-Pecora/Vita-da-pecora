@@ -17822,6 +17822,22 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1305935061}
+    - target: {fileID: 3446361837871339194, guid: f38aaaf6864b19e4da8df5037a0c2e94, type: 3}
+      propertyPath: dialogueLines.Array.data[1].speakerName
+      value: Dog
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446361837871339194, guid: f38aaaf6864b19e4da8df5037a0c2e94, type: 3}
+      propertyPath: dialogueLines.Array.data[2].speakerName
+      value: Dog
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446361837871339194, guid: f38aaaf6864b19e4da8df5037a0c2e94, type: 3}
+      propertyPath: dialogueLines.Array.data[3].speakerName
+      value: Dog
+      objectReference: {fileID: 0}
+    - target: {fileID: 3446361837871339194, guid: f38aaaf6864b19e4da8df5037a0c2e94, type: 3}
+      propertyPath: dialogueLines.Array.data[5].speakerName
+      value: Dog
+      objectReference: {fileID: 0}
     - target: {fileID: 6327969186222965653, guid: f38aaaf6864b19e4da8df5037a0c2e94, type: 3}
       propertyPath: m_LocalPosition.x
       value: -44
@@ -17997,6 +18013,11 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1305935061}
+    - target: {fileID: 7618760989251371833, guid: 09281b01035eba149857d9f28a497dec, type: 3}
+      propertyPath: dialogueLines.Array.data[1].sentence
+      value: "What? A way out? We've never heard of such a thing, but maybe you can
+        ask the dog, they\u2019ll know something about it for sure. "
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
