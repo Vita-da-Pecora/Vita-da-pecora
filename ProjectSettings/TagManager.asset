@@ -9,6 +9,7 @@ TagManager:
   - Fuse2
   - Fuse3
   - Door
+  - Water
   layers:
   - Default
   - TransparentFX
