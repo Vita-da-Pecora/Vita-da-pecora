@@ -30,12 +30,16 @@ public class Mimetismo : MonoBehaviour
             // Sincronizza la posizione gradualmente verso il gruppo
             Vector3 posizioneTarget = SheepGroup.GetPlayerPosition();
             transform.position = Vector3.Lerp(transform.position, posizioneTarget, Time.deltaTime * velocit‡Sincronizzazione);
-            if (Vector3.Distance(transform.position, posizioneTarget) <= 0.3)
+            if (Vector3.Distance(transform.position, posizioneTarget) <= 0.3f)
             {
                 transform.position = posizioneTarget;
             }
-            //transform.position = posizioneTarget;
+
+            // Sincronizza anche la rotazione verso quella del gruppo
+            Quaternion rotazioneTarget = SheepGroup.transform.rotation;
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotazioneTarget, Time.deltaTime * velocit‡Sincronizzazione);
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
