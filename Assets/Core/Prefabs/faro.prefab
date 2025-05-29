@@ -197,6 +197,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1d8a02877f7fa4840a4b5e2765bce877, type: 2}
+    - target: {fileID: -8089123073512778975, guid: 9f6b6c7d2ca51d04da6068b9c4565b5a, type: 3}
+      propertyPath: m_Name
+      value: IndicationBox
+      objectReference: {fileID: 0}
     - target: {fileID: -7980129703971042433, guid: 9f6b6c7d2ca51d04da6068b9c4565b5a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1152,6 +1156,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5925203376633149975, guid: 9f6b6c7d2ca51d04da6068b9c4565b5a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8721887705113421215}
+    - targetCorrespondingSourceObject: {fileID: -8089123073512778975, guid: 9f6b6c7d2ca51d04da6068b9c4565b5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7197866427638688126}
     - targetCorrespondingSourceObject: {fileID: -5642435800628263912, guid: 9f6b6c7d2ca51d04da6068b9c4565b5a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3250222810948541989}
@@ -1747,6 +1754,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4706309483537458376, guid: 9f6b6c7d2ca51d04da6068b9c4565b5a, type: 3}
+--- !u!1 &2242939810945708167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8089123073512778975, guid: 9f6b6c7d2ca51d04da6068b9c4565b5a, type: 3}
+  m_PrefabInstance: {fileID: 1197162227268510630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &7197866427638688126
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2242939810945708167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.5
+  m_Center: {x: -69.34, y: 5.7, z: 12.57}
 --- !u!1 &2273310707796189114 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8137651889499898852, guid: 9f6b6c7d2ca51d04da6068b9c4565b5a, type: 3}

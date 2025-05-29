@@ -40,6 +40,7 @@ public class ThirdPersonController : MonoBehaviour
         if (mimetismo == null || !mimetismo.isInvisible)
         {
             HandleMovement();
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
         }
     }
 
