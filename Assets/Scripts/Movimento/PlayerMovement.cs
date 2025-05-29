@@ -18,6 +18,8 @@ public class ThirdPersonController : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
     private bool isSprinting = false;
+    private Mimetismo mimetismo;
+
 
     private float cameraYaw;
     private float cameraPitch;
@@ -26,14 +28,21 @@ public class ThirdPersonController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        mimetismo = GetComponent<Mimetismo>();
         //Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
         HandleCamera();
-        HandleMovement();
+
+        // Disattiva movimento se il mimetismo è attivo
+        if (mimetismo == null || !mimetismo.isInvisible)
+        {
+            HandleMovement();
+        }
     }
+
 
     void HandleCamera()
     {

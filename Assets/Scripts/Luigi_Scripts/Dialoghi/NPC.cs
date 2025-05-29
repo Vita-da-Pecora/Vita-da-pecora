@@ -3,22 +3,33 @@ using UnityEngine;
 public class NPC : Interactable
 {
     public Dialogue_Manager dialogueManager;
-    public string characterName = "NPC";
-    [TextArea(3, 10)]
-    public string[] dialogueLines;
+    public Dialogue_Line[] dialogueLines;
+
+    private bool dialogueStarted = false;
 
     public override void Interact()
     {
         base.Interact();
-        dialogueManager.StartDialogue(characterName, dialogueLines);
+
+        if (!dialogueStarted)
+        {
+            dialogueManager.StartDialogue(dialogueLines);
+            dialogueStarted = true;
+        }
+        else
+        {
+            dialogueManager.DisplayNextSentence();
+        }
     }
 
-    void OnTriggerExit(Collider other)
+    public new void OnTriggerExit(Collider other)
     {
+        base.OnTriggerExit(other);
+
         if (other.CompareTag("Player"))
         {
             dialogueManager.EndDialogue();
+            dialogueStarted = false;
         }
     }
 }
-

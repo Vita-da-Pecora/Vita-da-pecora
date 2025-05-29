@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public string interactionMessage = "Premi E per interagire";
+    public string interactionMessage = "Premi F per interagire";
     public KeyCode interactionKey = KeyCode.F;
 
     private InteractionPromptUI promptUI;
@@ -36,8 +36,7 @@ public class Interactable : MonoBehaviour
             promptUI.Show(interactionMessage);
         }
     }
-
-    void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -45,4 +44,5 @@ public class Interactable : MonoBehaviour
             promptUI.Hide();
         }
     }
+
 }

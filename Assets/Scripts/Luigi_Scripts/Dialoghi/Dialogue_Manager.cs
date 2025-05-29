@@ -9,24 +9,22 @@ public class Dialogue_Manager : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text dialogueText;
 
-    private Queue<string> sentences;
+    private Queue<Dialogue_Line> lines;
     private bool isTyping = false;
-    private string currentSentence;
+    private Dialogue_Line currentLine;
 
     void Start()
     {
-        sentences = new Queue<string>();
+        lines = new Queue<Dialogue_Line>();
         dialoguePanel.SetActive(false);
     }
 
-    public void StartDialogue(string characterName, string[] dialogueLines)
+    public void StartDialogue(Dialogue_Line[] dialogueLines)
     {
-        nameText.text = characterName;
-        sentences.Clear();
-
-        foreach (string line in dialogueLines)
+        lines.Clear();
+        foreach (Dialogue_Line line in dialogueLines)
         {
-            sentences.Enqueue(line);
+            lines.Enqueue(line);
         }
 
         dialoguePanel.SetActive(true);
@@ -38,19 +36,20 @@ public class Dialogue_Manager : MonoBehaviour
         if (isTyping)
         {
             StopAllCoroutines();
-            dialogueText.text = currentSentence;
+            dialogueText.text = currentLine.sentence;
             isTyping = false;
             return;
         }
 
-        if (sentences.Count == 0)
+        if (lines.Count == 0)
         {
             EndDialogue();
             return;
         }
 
-        currentSentence = sentences.Dequeue();
-        StartCoroutine(TypeSentence(currentSentence));
+        currentLine = lines.Dequeue();
+        nameText.text = currentLine.speakerName;
+        StartCoroutine(TypeSentence(currentLine.sentence));
     }
 
     IEnumerator TypeSentence(string sentence)

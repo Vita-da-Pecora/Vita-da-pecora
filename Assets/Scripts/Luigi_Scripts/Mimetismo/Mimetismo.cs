@@ -13,10 +13,10 @@ public class Mimetismo : MonoBehaviour
         {
             isInvisible = !isInvisible;
             Debug.Log("Stato mimetismo: " + isInvisible);
-            
-            bool enable = isInvisible ? false : true;
-            GetComponent<ThirdPersonController>().enabled = enable;
-            GetComponent<CharacterController>().enabled = enable;
+
+            //bool enable = isInvisible ? false : true;
+            //GetComponent<ThirdPersonController>().isMovementActive = enable;
+            //GetComponent<CharacterController>().enabled = enable;
         }
 
         if (!nearSheep && isInvisible)
