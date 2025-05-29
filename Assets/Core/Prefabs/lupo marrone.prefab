@@ -8,21 +8,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 611461999588692411, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+      propertyPath: loseSceneName
+      value: GameOver
+      objectReference: {fileID: 0}
     - target: {fileID: 2246582232601755771, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e00b380b24de0384bb45fdb4a81b7c0c, type: 2}
+    - target: {fileID: 2619819714756296903, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477362923764934092, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4945631024813113748, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.67381
+      value: 59.577084
       objectReference: {fileID: 0}
     - target: {fileID: 4945631024813113748, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 78.55415
+      value: 79.57363
       objectReference: {fileID: 0}
     - target: {fileID: 4945631024813113748, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -59.59751
+      value: -100.93262
       objectReference: {fileID: 0}
     - target: {fileID: 4945631024813113748, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -52,12 +64,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5278139094402171049, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427742882230781020, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7503819380910518921, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
       propertyPath: m_Name
       value: lupo marrone
       objectReference: {fileID: 0}
+    - target: {fileID: 7503819380910518921, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503819380910518921, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092132172570846726, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8597290739614068787, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7503819380910518921, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4132468054732078891}
   m_SourcePrefab: {fileID: 100100000, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+--- !u!1 &1827041138072754580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7503819380910518921, guid: 0109707099b8e7445b9702316d8b63d7, type: 3}
+  m_PrefabInstance: {fileID: 8176320052195683101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &4132468054732078891
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827041138072754580}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 1, z: 0}

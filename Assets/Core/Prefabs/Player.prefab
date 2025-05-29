@@ -210,10 +210,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3283896971043761551}
   - component: {fileID: 5165992365061429366}
+  - component: {fileID: 2528108639254049047}
   - component: {fileID: 3177481714067337008}
   - component: {fileID: 7950169724194004044}
   - component: {fileID: 5692591705644748420}
-  - component: {fileID: 7179192173026103189}
+  - component: {fileID: 7288764906358093772}
+  - component: {fileID: 7352422057325016882}
+  - component: {fileID: 804565458574926270}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -264,6 +267,33 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.45, z: 0}
+--- !u!54 &2528108639254049047
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6403338857809419897}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!114 &3177481714067337008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +339,7 @@ MonoBehaviour:
   cameraPivot: {fileID: 4630035131668357102}
   mouseSensitivity: 4
   rotationSmoothTime: 0.1
---- !u!114 &7179192173026103189
+--- !u!114 &7288764906358093772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,6 +368,31 @@ MonoBehaviour:
   takenGreen: {fileID: 0}
   takenOrange: {fileID: 0}
   takenBrown: {fileID: 0}
+--- !u!114 &7352422057325016882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6403338857809419897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1ae10d9c5536c49a8f7838b79f3424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+--- !u!114 &804565458574926270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6403338857809419897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced2aa088504e674c93c13b05d70c0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1057042210374514747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -461,8 +516,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 68ae890c4c14dee49b530298f3570968, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4190689097470923479}
   m_SourcePrefab: {fileID: 100100000, guid: 68ae890c4c14dee49b530298f3570968, type: 3}
+--- !u!1 &174012677989483882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 68ae890c4c14dee49b530298f3570968, type: 3}
+  m_PrefabInstance: {fileID: 1057042210374514747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4190689097470923479
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174012677989483882}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8da194eb7255a6b4dbfb9b1c9135d3d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &658061245245169616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 68ae890c4c14dee49b530298f3570968, type: 3}

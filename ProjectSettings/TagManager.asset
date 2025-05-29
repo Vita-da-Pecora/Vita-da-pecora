@@ -10,6 +10,9 @@ TagManager:
   - Fuse3
   - Door
   - Water
+  - Sheep
+  - SheepGroup
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,9 +20,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Animals
   - 
   - 
   - 

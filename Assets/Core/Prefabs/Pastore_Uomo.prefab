@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5227135747451151232}
   - component: {fileID: 1041732177702740063}
   - component: {fileID: 8044804275205964490}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pastore_Uomo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59def1a1e4cd86b4eb28b9aa91e57df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loseSceneName: SCN_Lose
+  loseSceneName: GameOver
 --- !u!195 &1041732177702740063
 NavMeshAgent:
   m_ObjectHideFlags: 0

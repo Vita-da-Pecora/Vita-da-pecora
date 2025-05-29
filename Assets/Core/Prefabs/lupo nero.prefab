@@ -8,21 +8,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 87002784164908315, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 448013213753498414, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615872010750766913, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1827041138072754580, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
       propertyPath: m_Name
       value: lupo nero
       objectReference: {fileID: 0}
+    - target: {fileID: 1827041138072754580, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827041138072754580, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3880544813659318921, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.67381
+      value: 53.56355
       objectReference: {fileID: 0}
     - target: {fileID: 3880544813659318921, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 78.55415
+      value: 80.53982
       objectReference: {fileID: 0}
     - target: {fileID: 3880544813659318921, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -59.59751
+      value: -98.65315
       objectReference: {fileID: 0}
     - target: {fileID: 3880544813659318921, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
       propertyPath: m_LocalRotation.w
@@ -52,12 +72,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4055395046155316148, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700083333350657745, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134861337913437146, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7950376609467886438, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d3ea6216101f1eb43a538db6b453ab42, type: 2}
+    - target: {fileID: 8720172528513104550, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+      propertyPath: loseSceneName
+      value: GameOver
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1827041138072754580, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4791351334758998748}
   m_SourcePrefab: {fileID: 100100000, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+--- !u!1 &3084959575181750719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1827041138072754580, guid: 6d5309022a81ecc4b9178587a89f5b06, type: 3}
+  m_PrefabInstance: {fileID: 3716892871366797355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &4791351334758998748
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3084959575181750719}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 1, z: 0}
